@@ -1,0 +1,89 @@
+.task {
+    margin: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+    height: 150px;
+
+    &__header {
+        display: flex;
+        text-align: left;
+        ф &__completed {
+            width: 15px;
+            height: 15px;
+            border-radius: 5px;
+            border: 2px solid #aab7d4;
+
+            &:hover {
+                border: 2px solid #4891ff;
+            }
+        }
+
+        &__title {
+            color: #3d8fec;
+            font-weight: 500;
+
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 10px;
+            }
+        }
+    }
+
+    &__info {
+        &__description {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: left;
+        }
+
+        &__date {
+            display: flex;
+            justify-content: space-around;
+            color: #50b810;
+        }
+
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            &__tags {
+                width: 70px;
+                height: 20px;
+
+                &:first-child {
+                    color: #ffffff;
+                    border-radius: 5px;
+                    background-color: #b233a6;
+                    width: 68px;
+                    height: 20px;
+                }
+
+                &:nth-child(2) {
+                    position: relative;
+                    width: 72px;
+                    height: 20px;
+                    color: #545f71;
+                    border-radius: 5px;
+                    background-color: #ebeef6;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: -8px;
+                        border-style: solid;
+                        border-width: 10px 0 10px 10px;
+                        border-color: transparent #ebeef6;
+                        z-index: 2;
+                    }
+                }
+            }
+            &__img {
+                margin-left: 70px;
+            }
+        }
+    }
+}

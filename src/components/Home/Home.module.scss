@@ -1,0 +1,19 @@
+.header {
+    margin: 0 auto;
+    width: 263px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__nav {
+        &__img {
+            width: 20px;
+            height: 20px;
+            margin-right: 20px;
+        }
+        &__onActive {
+            border: 1px solid #7b8aab;
+            border-radius: 4px;
+        }
+    }
+}
